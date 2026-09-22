@@ -43,6 +43,24 @@
     background: var(--card); margin: 24px 0;
   }
   .pitch-box strong { color: var(--accent); }
+  .pricing-table .tier-badge {
+    display: inline-block; font-family: var(--mono); font-size: 0.72rem; color: var(--accent);
+    border: 1px solid var(--accent-dim); border-radius: 3px; padding: 1px 7px; margin-right: 6px;
+  }
+  .pricing-table td:last-child { color: var(--accent); font-weight: 600; white-space: nowrap; }
+  .pricing-table .turnaround { display: block; color: var(--fg-dim); font-size: 0.78rem; margin-top: 8px; }
+  .audit-box {
+    border: 1px solid var(--border); border-radius: 6px; padding: 24px 28px;
+    background: var(--card); margin: 24px 0;
+  }
+  .audit-box h3 { margin-top: 0; }
+  .audit-cta {
+    display: inline-block; margin-top: 16px; padding: 11px 22px;
+    background: var(--accent); color: #0a0a0a; text-decoration: none;
+    font-weight: 600; border-radius: 4px; font-size: 0.9rem; transition: background .2s;
+  }
+  .audit-cta:hover { background: var(--fg); }
+  .scope-note { color: var(--fg-dim); font-size: 0.86rem; font-style: italic; margin-top: 10px; }
 </style>
 </head>
 <body>
@@ -149,6 +167,52 @@
     </div>
 
     <p class="closing-line">We do not just produce music; we map its DNA.</p>
+
+    <h2>Service Tiers &amp; Commercial Structure</h2>
+    <table class="pitt-table pricing-table">
+      <thead>
+        <tr><th>Tier</th><th>Deliverables &amp; Turnaround</th><th>Rate</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="tier-badge">01</span><strong>Pre-Release Spectral &amp; Codec Audit</strong><br><span style="color:var(--fg-dim); font-size:0.82rem;">per track</span></td>
+          <td>
+            High-resolution FFT frequency bin report (20 Hz&ndash;20 kHz) &middot; inter-sample peak (ISP) and true-peak headroom verification &middot; transcoding stress-test (AAC 256k / Ogg 160k / Opus 128k) &middot; phase correlation and sub-bass mono compatibility check.
+            <span class="turnaround">Turnaround: 24&ndash;48 hours</span>
+          </td>
+          <td>$120&ndash;$175</td>
+        </tr>
+        <tr>
+          <td><span class="tier-badge">02</span><strong>Full Audit + Algorithmic Feature Vector</strong><br><span style="color:var(--fg-dim); font-size:0.82rem;">single / lead release</span></td>
+          <td>
+            Everything in Tier 01, plus spectral centroid and dynamic trajectory mapping &middot; feature extraction and Random Forest classification match against DSP playlist profiles (Spotify, Apple, Tidal) &middot; structural pacing and intro retention risk analysis.
+            <span class="turnaround">Turnaround: 48&ndash;72 hours</span>
+          </td>
+          <td>$275&ndash;$350</td>
+        </tr>
+        <tr>
+          <td><span class="tier-badge">03</span><strong>Catalog Forensics &amp; Provenance Review</strong><br><span style="color:var(--fg-dim); font-size:0.82rem;">EP / album / library</span></td>
+          <td>
+            Batch spectral and phase-domain anomaly scanning &middot; synthetic/generative voice artifact detection and fingerprint check &middot; complete technical pass/fail export with remediation action items.
+            <span class="turnaround">Turnaround: 3&ndash;5 business days</span>
+          </td>
+          <td>Custom / retainer<br><span style="color:var(--fg-dim); font-weight:400; font-size:0.78rem;">e.g. $750/EP, $1,200/album</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="scope-note">Every tier is a diagnostic and forensic audit &mdash; a report, not a fix. Phase realignment, dynamic correction, or other remediation applied to the audio is billed separately as stem/master re-engineering.</p>
+
+    <h2>Request an Audit</h2>
+    <div class="audit-box">
+      <h3>File Submission Requirements</h3>
+      <ul>
+        <li><strong>Format:</strong> Uncompressed WAV or AIFF (24-bit or 32-bit float, native sample rate up to 96 kHz). No MP3s or pre-transcoded audio.</li>
+        <li><strong>Headroom:</strong> Minimum &minus;1.0 dBFS true-peak ceiling on unmastered mixes; unconstrained dynamic range preferred.</li>
+        <li><strong>Reference files:</strong> Up to 2 commercial target reference tracks (WAV preferred) for contextual feature-vector mapping.</li>
+        <li><strong>Metadata:</strong> Intended release genre, target DSP platforms, and whether the recording contains live acoustic instrumentation, hardware synthesis, or synthetic stem components.</li>
+      </ul>
+      <a class="audit-cta" href="mailto:6208338@gmail.com?subject=Pre-Release%20Audit%20Inquiry">Submit Stems / Master for Audit &rarr;</a>
+    </div>
 
     <p style="text-align:center;"><a href="https://ikonstas70.github.io/music/">View the Discography &rarr;</a></p>
 
